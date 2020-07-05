@@ -1,0 +1,56 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<script language="JavaScript1.2">
+<!--
+
+var message="#@*%!#%()!%#!#$(*"
+function disableclick(e) {
+   if (document.all) {
+      if (event.button==2||event.button==3) {
+         if (event.srcElement.tagName=="IMG"){
+            alert(message);
+            return false;
+         }
+      }
+   }
+   if (document.layers) {
+      if (e.which == 3) {
+         alert(clickmessage);
+         return false;
+      }
+   }
+}
+function associateimages(){
+   for(i=0;i<document.images.length;i++)
+      document.images[i].onmousedown=disableclick;
+}
+if (document.all)
+   document.onmousedown=disableclick
+else if (document.layers)
+   associateimages()
+//-->
+</script>
+<title>alienpictures.org</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+body p {
+	font-family: Verdana, Geneva, sans-serif;
+}
+</style>
+</head>
+
+<body bgcolor="#000000" text="#FFFFFF" link="#FF0000" vlink="#FF0000" alink="#FF0000">
+<div align="center"> 
+  <p>alienpictures.org</p>
+  <p><font color="#FFCC00" size="3" face="Tekton, Tempus Sans ITC, Times New Roman"><em><img src="alienicon.gif" width="50" height="50" border="0"></em></font></p>
+  <p>alexander haupt</p>
+  <p>610.506.8690</p>
+  <p><a href="mailto:alex@alienpictures.org">contact</a></p>
+  <p><a href="AHaupt Resume March 2019.pdf">resume</a></p>
+  <p>&nbsp;</p>
+  </div>
+
+</body>
+</html>
