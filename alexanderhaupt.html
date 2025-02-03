@@ -33,13 +33,13 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 20px;
             padding: 20px;
-            background-color: #ffffff;
+            background-color: #000000;
         }
 
         .gallery-item {
             text-align: center;
             position: relative;
-            overflow: hidden;
+            overflow: visible;
         }
 
         .gallery-item img {
@@ -47,33 +47,15 @@
             max-width: 280px;
             height: auto;
             transition: all 0.3s ease;
-            filter: grayscale(0%);
+            position: relative;
+            z-index: 2;
         }
 
-        /* Option 1: Zoom + Glow */
         .gallery-item img:hover {
-            transform: scale(1.1);
-            filter: brightness(120%);
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+            transform: translateY(-5px);
+            filter: brightness(110%);
+            box-shadow: 0 15px 30px rgba(255, 255, 255, 0.3);
         }
-
-        /* Option 2: Tilt + Glow 
-        .gallery-item img:hover {
-            transform: perspective(500px) rotateX(5deg);
-            filter: brightness(120%);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-        }
-        */
-
-        /* Option 3: Grayscale to Color + Zoom 
-        .gallery-item img {
-            filter: grayscale(100%);
-        }
-        .gallery-item img:hover {
-            transform: scale(1.1);
-            filter: grayscale(0%);
-        }
-        */
 
         .gallery-item a {
             display: block;
