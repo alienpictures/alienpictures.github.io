@@ -87,6 +87,16 @@
             }
         }
 
+        .mcm-navigation {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            width: 100%;
+            max-width: 300px;
+            margin: 20px auto; /* Added margin for spacing */
+        }
+
         .mcm-button {
             border: 2px solid #FAF7F7;
             padding: 15px 30px;
@@ -95,6 +105,16 @@
             background-color: transparent;
             position: relative;
             overflow: hidden;
+            text-decoration: none;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .mcm-button:hover {
+            background-color: #FAF7F7;
+            color: #000000;
         }
     </style>
 </head>
@@ -102,6 +122,24 @@
     <div class="container">
         <img src="alex yoohoo HK2010.png" alt="alexander haupt" class="hero-image">
         
+        <div class="mcm-navigation">
+            <a href="http://alienpictures.org/alexanderhaupt.html" class="mcm-button">
+                ALEXANDER HAUPT
+            </a>
+            <a href="Alexander-Haupt_Resume_2023.pdf" class="mcm-button">
+                RESUME
+            </a>
+            <a href="mailto:alex@alienpictures.org" class="mcm-button">
+                CONTACT
+            </a>
+            <a href="lamBUTTON.html" class="mcm-button">
+                LAM BUTTON
+            </a>
+            <a href="dancingBUTTON.html" class="mcm-button">
+                DANCING BUTTON
+            </a>
+        </div>
+
         <div class="gallery">
             <div class="gallery-item">
                 <a href="http://sheetz.com" target="_blank">
