@@ -49,12 +49,12 @@
             transition: all 0.3s ease;
             position: relative;
             z-index: 2;
+            transform: scale(1);  /* Starting scale */
         }
 
         .gallery-item img:hover {
-            transform: translateY(-5px);
-            filter: brightness(110%);
-            box-shadow: 0 15px 30px rgba(255, 255, 255, 0.3);
+            transform: scale(0.95);  /* Shrink to 95% of original size */
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.6);  /* Red glow */
         }
 
         .gallery-item a {
