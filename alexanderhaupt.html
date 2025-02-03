@@ -38,18 +38,42 @@
 
         .gallery-item {
             text-align: center;
+            position: relative;
+            overflow: hidden;
         }
 
         .gallery-item img {
             width: 100%;
             max-width: 280px;
             height: auto;
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
+            filter: grayscale(0%);
         }
 
+        /* Option 1: Zoom + Glow */
         .gallery-item img:hover {
-            transform: scale(1.05);
+            transform: scale(1.1);
+            filter: brightness(120%);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
         }
+
+        /* Option 2: Tilt + Glow 
+        .gallery-item img:hover {
+            transform: perspective(500px) rotateX(5deg);
+            filter: brightness(120%);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        */
+
+        /* Option 3: Grayscale to Color + Zoom 
+        .gallery-item img {
+            filter: grayscale(100%);
+        }
+        .gallery-item img:hover {
+            transform: scale(1.1);
+            filter: grayscale(0%);
+        }
+        */
 
         .gallery-item a {
             display: block;
