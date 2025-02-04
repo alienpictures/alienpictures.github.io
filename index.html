@@ -39,21 +39,30 @@
     </div>
     <div>
         <a href="alexanderhaupt.html">
-            <img src="alex button.png" alt="Alex Button" class="button-img"> <!-- Button image -->
+            <img src="alex button.png" alt="Alex Button" class="button-img" onmouseover="playSound()">
         </a>
     </div>
     <div>
         <a href="AHaupt Resume March 2019.pdf">
-            <img src="resume button.png" alt="Resume Button" class="button-img"> <!-- Button image -->
+            <img src="resume button.png" alt="Resume Button" class="button-img" onmouseover="playSound()">
         </a>
     </div>
     <div>
         <a href="mailto:alex@alienpictures.org">
-            <img src="contact.png" alt="Contact" class="button-img"> <!-- Button image -->
+            <img src="contact.png" alt="Contact" class="button-img" onmouseover="playSound()">
         </a>
     </div>
     <footer>
         <p><strong>there is no future.</strong></p>
     </footer>
+
+    <!-- Audio Element -->
+    <audio id="hover-sound" src="hover-sound.mp3" preload="auto"></audio>
+
+    <script>
+        function playSound() {
+            document.getElementById('hover-sound').play();
+        }
+    </script>
 </body>
 </html>
