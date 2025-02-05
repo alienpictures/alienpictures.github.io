@@ -19,7 +19,7 @@
             top: 0; /* Align to the top */
             left: 50%; /* Center horizontally */
             transform: translateX(-50%); /* Adjust for centering */
-            width: auto; /* Maintain original width */
+            width: 100%; /* Full width */
             max-width: 600px; /* Max width */
             height: auto; /* Maintain aspect ratio */
             z-index: 1000; /* Ensure it stays above other content */
@@ -29,7 +29,7 @@
             max-width: 600px;
             margin: 0 auto;
             padding: 80px 20px; /* Add padding to avoid overlap with fixed header */
-            padding-top: 200px; /* Adjusted padding to account for the fixed header height */
+            padding-top: 300px; /* Increased padding to account for the fixed header height */
         }
 
         .gallery {
@@ -48,7 +48,7 @@
 
         .gallery-item img {
             width: 100%;
-            max-width: 280px;
+            max-width: 280px; /* Each image width */
             height: auto;
             transition: all 0.3s ease;
             position: relative;
