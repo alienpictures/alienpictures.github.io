@@ -17,8 +17,9 @@
         .header-image {
             position: fixed; /* Fixed position */
             top: 0; /* Align to the top */
-            left: 0; /* Align to the left */
-            width: 100%; /* Full width */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Adjust for centering */
+            width: auto; /* Maintain original width */
             max-width: 600px; /* Max width */
             height: auto; /* Maintain aspect ratio */
             z-index: 1000; /* Ensure it stays above other content */
@@ -28,6 +29,7 @@
             max-width: 600px;
             margin: 0 auto;
             padding: 80px 20px; /* Add padding to avoid overlap with fixed header */
+            padding-top: 120px; /* Additional padding to account for the fixed header */
         }
 
         .gallery {
