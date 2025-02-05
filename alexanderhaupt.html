@@ -14,18 +14,20 @@
             font-family: sans-serif;
         }
 
+        .header-image {
+            position: fixed; /* Fixed position */
+            top: 0; /* Align to the top */
+            left: 0; /* Align to the left */
+            width: 100%; /* Full width */
+            max-width: 600px; /* Max width */
+            height: auto; /* Maintain aspect ratio */
+            z-index: 1000; /* Ensure it stays above other content */
+        }
+
         .container {
             max-width: 600px;
             margin: 0 auto;
-            padding: 20px;
-        }
-
-        .hero-image {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-            margin: 0 auto;
-            display: block;
+            padding: 80px 20px; /* Add padding to avoid overlap with fixed header */
         }
 
         .gallery {
@@ -83,9 +85,9 @@
     </style>
 </head>
 <body>
+    <img src="alex yoohoo HK2010.png" alt="alexander haupt" class="header-image"> <!-- Fixed header image -->
+    
     <div class="container">
-        <img src="alex yoohoo HK2010.png" alt="alexander haupt" class="hero-image">
-        
         <div class="gallery">
             <div class="gallery-item">
                 <a href="https://www.instagram.com/reel/DEf3wwvJ7zu/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
