@@ -90,6 +90,13 @@
             cursor: pointer; /* Change cursor to pointer */
         }
 
+        .footer-image {
+            display: block; /* Make it a block element */
+            margin: 20px auto; /* Center it horizontally */
+            width: auto; /* Maintain original width */
+            max-width: 100%; /* Responsive */
+        }
+
         @media (max-width: 768px) {
             .gallery {
                 gap: 20px;
@@ -297,6 +304,12 @@
             <p>Philadelphia, PA</p>
             <p><a href="mailto:alex@alienpictures.org">email me</a></p>
         </footer>
+
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="https://alienpictures.org/index.html">
+                <img src="littleFOOTER.png" alt="Footer Image" class="footer-image">
+            </a>
+        </div>
     </div>
 </body>
 </html>
