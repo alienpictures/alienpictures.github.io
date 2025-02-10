@@ -1,196 +1,83 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>alienpictures.org</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexander Haupt</title>
+    <style>
+        body {
+            background-color: #000000; /* Black background */
+            color: #FAF7F7; /* Light text color */
+            font-family: 'Montserrat', sans-serif; /* Modern font */
+            margin: 0;
+            padding: 20px;
+            display: flex; /* Use flexbox for layout */
+            flex-direction: column; /* Stack items vertically */
+            align-items: center; /* Center items horizontally */
+            height: 100vh; /* Full viewport height */
+            justify-content: center; /* Center items vertically */
+        }
 
-<!-- CSS Reset -->
-<style type="text/css">
-html, body {
-	margin: 0 !important;
-	padding: 0 !important;
-	height: 100% !important;
-	width: 100% !important;
-}
+        h1 {
+            color: #FFFFFF; /* White for headings */
+            font-size: 3em; /* Large font size */
+            margin: 0; /* Remove default margin */
+            text-align: center; /* Center text */
+        }
 
-* {
-	-ms-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
-}
+        .nav {
+            display: flex; /* Use flexbox for navigation */
+            justify-content: space-around; /* Space items evenly */
+            width: 100%; /* Full width */
+            max-width: 800px; /* Limit max width */
+            margin: 20px 0; /* Space above and below */
+        }
 
-.ExternalClass {
-	width: 100%;
-}
+        .nav a {
+            color: #FFFFFF; /* White for links */
+            text-decoration: none; /* Remove underline */
+            font-size: 1.5em; /* Font size for links */
+            flex: 1; /* Allow links to grow equally */
+            text-align: center; /* Center text in links */
+            padding: 10px; /* Padding for buttons */
+            transition: all 0.3s; /* Smooth transition */
+            position: relative; /* Position for glow effect */
+        }
 
-div[style*="margin: 16px 0"] {
-	margin: 0 !important;
-}
-table, td {
-	mso-table-lspace: 0pt !important;
-	mso-table-rspace: 0pt !important;
-}
-/* What it does: Fixes webkit padding issue. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
-table {
-	border-spacing: 0 !important;
-	border-collapse: collapse !important;
-	table-layout: fixed !important;
-	margin: 0 auto !important;
-}
-table table table {
-	table-layout: auto;
-}
-/* What it does: Uses a better rendering method when resizing images in IE. */
-img {
-	-ms-interpolation-mode: bicubic;
-}
-/* What it does: Overrides styles added when Yahoo's auto-senses a link. */
-.yshortcuts a {
-	border-bottom: none !important;
-}
-/* What it does: Another work-around for iOS meddling in triggered links. */
-a[x-apple-data-detectors] {
-	color: inherit !important;
-}
-</style>
+        .nav a::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 100%;
+            height: 4px; /* Height of the glow */
+            background: rgba(255, 255, 255, 0.5); /* White glow */
+            transform: translateX(-50%) scaleX(0); /* Start hidden */
+            transition: transform 0.3s; /* Smooth transition */
+        }
 
-<!-- Progressive Enhancements -->
-<style type="text/css">
-/* Button styles */
-.button-td, .button-a {
-	transition: all 0.3s ease;
-	border-radius: 5px; /* Rounded corners */
-	padding: 10px 20px; /* Padding for buttons */
-	background-color: #333; /* Dark background for buttons */
-	color: #FAF7F7; /* Light text color */
-	text-decoration: none; /* Remove underline */
-	display: inline-block; /* Make it a block element */
-}
+        .nav a:hover {
+            transform: scale(0.95); /* Slightly shrink on hover */
+        }
 
-.button-td:hover, .button-a:hover {
-	background-color: #555; /* Lighter background on hover */
-	box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 0, 0, 0.6); /* Glowing effect */
-	transform: scale(1.05); /* Slightly enlarge on hover */
-}
-
-a:link {
-    color: #FAF7F7;
-}
-</style>
+        .nav a:hover::after {
+            transform: translateX(-50%) scaleX(1); /* Show glow on hover */
+        }
+    </style>
 </head>
-<body width="100%" height="100%" bgcolor="#000000" style="margin: 0;" yahoo="yahoo">
-<table cellpadding="0" cellspacing="0" border="0" height="100%" width="100%" bgcolor="#000000" style="border-collapse:collapse;">
-  <tr>
-    <td bgcolor="#000000"><center style="width: 100%;">
-        
-        <div style="max-width: 600px;"> 
-
-		<!-- Body : BEGIN -->
-          <table cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#000000" width="100%" style="max-width: 600px;">
-            
-            <!-- Hero Image, Flush-->
-            <tr>
-              <td class="full-width-image" align="center" ><img src="index header.png" width="680" alt="alexander haupt" border="0" style="width: 100%; max-width: 600px; height: auto;"></td>
-            </tr>
-
-			<tr>
-              <td bgcolor="#000000">&nbsp;</td>
-            </tr>
-
-            <tr>
-              <td bgcolor="#000000" align="center" height="100%" valign="top" width="100%">                <table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="max-width:560px;">
-                  <tr>
-                    <td align="center" valign="top" bgcolor="#000000" style="font-size: 0; padding: 10px 10px 30px 10px; color: #000000;">
-                      <p>&nbsp;</p>
-                      <div style="display: inline-block; max-width: 50%; margin: 0 -2px; vertical-align: top; width: 100%; color: #000000;" class="stack-column">
-                        <table cellspacing="0" cellpadding="0" border="0" width="100%">
-                          <tr>
-                            <td style="padding: 0 20px;">
-                              <table cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;text-align: left;">
-                                <tr>
-                                  <td style="text-align: center;">
-                                    <a href="http://alienpictures.org/alexanderhaupt.html" target="_blank" class="button-td">
-                                      <img src="alex button.png" width="600" alt="Sheetz.com" target="_blank" style="border: 0;width: 100%;max-width: 200px;height: auto;" class="center-on-narrow">
-                                    </a>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td style="font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #555555; padding-top: 10px;" class="stack-column-center">&nbsp;</td>
-                                </tr>
-                              </table>
-                            </td>
-                          </tr>
-                        </table>
-                        <p>&nbsp;</p>
-                      </div>
-                      <p>&nbsp;</p>
-                      <div style="display:inline-block; max-width:50%; margin: 0 -2px; vertical-align:top; width:100%;" class="stack-column">
-                        <table cellspacing="0" cellpadding="0" border="0" width="100%">
-                          <tr>
-                            <td style="padding: 0 20px;">
-                              <table cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;text-align: left;">
-                                <tr>
-                                  <td style="text-align: center;">
-                                    <a href="Alexander-Haupt_Resume_2023.pdf" class="button-td">
-                                      <img src="resume button.png" width="600" alt="" target="_blank" style="border: 0;width: 100%;max-width: 200px;height: auto;" class="center-on-narrow">
-                                    </a>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td style="font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #555555; padding-top: 10px;" class="stack-column-center"> <p>&nbsp;</p></td>
-                                </tr>
-                              </table>
-                            </td>
-                          </tr>
-                        </table>
-                        <p>&nbsp;</p>
-                      </div>
-                      <p>&nbsp;</p>
-                      <div style="display:inline-block; max-width:50%; margin: 0 -2px; vertical-align:top; width:100%;" class="stack-column">
-                        <table cellspacing="0" cellpadding="0" border="0" width="100%">
-                          <tr>
-                            <td style="padding: 0 20px;">
-                              <table cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;text-align: left;">
-                                <tr>
-                                  <td style="text-align: center;">
-                                    <a href="mailto:alex@alienpictures.org" class="button-td">
-                                      <img src="contact.png" width="600" alt="" style="border: 0;width: 100%;max-width: 200px;height: auto;" class="center-on-narrow">
-                                    </a>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td style="font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #555555; padding-top: 10px;" class="stack-column-center">&nbsp;</td>
-                                </tr>
-                              </table>
-                            </td>
-                          </tr>
-                        </table>
-                      </div>
-                      <p>&nbsp;</p></td>
-					</tr>
-				  </table>
-			  </td>
-			  </tr>
-			</table>
-          <!-- Body : END --> 
-          
-          <!-- Footer : BEGIN -->
-          <table cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 680px;">
-            <tr>
-              <td bgcolor="#000000" style="padding: 40px 10px;width: 100%;font-size: 12px; font-family: sans-serif; mso-height-rule: exactly; line-height:18px; text-align: center; color: #888888;"><webversion style="color:#cccccc; text-decoration:underline; font-weight: bold;"><strong>there is no future.</strong></webversion>
-                <br>
-                <br>
-                alienpictures.org<br>
-                <span class="mobile-link--footer">Philadelphia, PA</span> <br>
-                <br>
-                <unsubscribe style="color:#888888; text-decoration:underline;"></unsubscribe></td>
-            </tr>
-          </table>
-          <!-- Footer : END --> 
-        </div>
-      </center></td>
-  </tr>
-</table>
+<body>
+    <h1>Alexander Haupt</h1>
+    <div class="nav">
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <div id="resume">
+        <h2>Resume</h2>
+        <!-- Resume content goes here -->
+    </div>
+    <div id="contact">
+        <h2>Contact</h2>
+        <!-- Contact content goes here -->
+    </div>
 </body>
 </html>
