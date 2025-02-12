@@ -1,202 +1,79 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>Alien Pictures</title>
+    <title>Alien Pictures</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap" rel="stylesheet">
 
-<!-- CSS Reset -->
-<style type="text/css">
-html, body {
-	margin: 0 !important;
-	padding: 0 !important;
-	height: 100% !important;
-	width: 100% !important;
-}
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            color: #FAF7F7;
+            font-family: 'Raleway', sans-serif; /* Use the new font */
+            text-align: center; /* Center all text */
+        }
 
-* {
-	-ms-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
-}
+        .header-image {
+            width: 70%; /* Set to 70% of its original size */
+            height: auto; /* Maintain aspect ratio */
+        }
 
-.ExternalClass {
-	width: 100%;
-}
+        .link {
+            font-family: 'Raleway', sans-serif; /* Use the new font */
+            font-size: 24px; /* Adjust font size as needed */
+            color: #FAF7F7; /* Match color */
+            text-decoration: none; /* Remove underline */
+            display: block; /* Make links block elements for spacing */
+            margin: 20px 0; /* Set consistent margin for spacing */
+            text-transform: lowercase; /* Ensure all text is lowercase */
+        }
 
-div[style*="margin: 16px 0"] {
-	margin: 0 !important;
-}
-table, td {
-	mso-table-lspace: 0pt !important;
-	mso-table-rspace: 0pt !important;
-}
-/* What it does: Fixes webkit padding issue. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
-table {
-	border-spacing: 0 !important;
-	border-collapse: collapse !important;
-	table-layout: fixed !important;
-	margin: 0 auto !important;
-}
-table table table {
-	table-layout: auto;
-}
-/* What it does: Uses a better rendering method when resizing images in IE. */
-img {
-	-ms-interpolation-mode: bicubic;
-}
-/* What it does: Overrides styles added when Yahoo's auto-senses a link. */
-.yshortcuts a {
-	border-bottom: none !important;
-}
-/* What it does: Another work-around for iOS meddling in triggered links. */
-a[x-apple-data-detectors] {
-	color: inherit !important;
-}
-</style>
+        .footer-image {
+            width: 25%; /* Set to 25% of its original size */
+            height: auto; /* Maintain aspect ratio */
+            margin-top: 20px; /* Space above the image */
+            position: relative; /* Position for hover effect */
+            transition: opacity 0.3s ease; /* Smooth transition */
+        }
 
-<!-- Progressive Enhancements -->
-<style type="text/css">
-/* What it does: Hover styles for buttons */
-.button-td, .button-a {
-	transition: all 100ms ease-in;
-}
-.button-td:hover, .button-a:hover {
-	background: #555555 !important;
-	border-color: #555555 !important;
-}
-a:link {
-    color: #FAF7F7;
-}
-</style>
+        .footer-image:hover {
+            opacity: 0; /* Hide the original image on hover */
+        }
 
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        background-color: #000000;
-        color: #FAF7F7;
-        font-family: 'Raleway', sans-serif;
-        text-align: center; /* Center all text */
-    }
-    .header-image {
-        width: 50%; /* Set to 50% of its original size */
-        height: auto; /* Maintain aspect ratio */
-    }
-    .link {
-        font-family: 'Raleway', sans-serif;
-        font-size: 24px; /* Adjust font size as needed */
-        color: #FAF7F7; /* Match color */
-        text-decoration: none; /* Remove underline */
-        display: block; /* Make links block elements for spacing */
-        margin: 15px 0; /* Set consistent margin for spacing */
-        text-transform: lowercase; /* Ensure all text is lowercase */
-    }
-    .footer-image {
-        width: 25%; /* Set to 25% of its original size */
-        height: auto; /* Maintain aspect ratio */
-        margin-top: 20px; /* Space above the image */
-    }
-</style>
+        .footer-image:hover + .hover-image {
+            opacity: 1; /* Show the rollover image on hover */
+        }
 
-<!-- Link to Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap" rel="stylesheet">
+        .hover-image {
+            width: 25%; /* Set to 25% of its original size */
+            height: auto; /* Maintain aspect ratio */
+            margin-top: 20px; /* Space above the image */
+            position: absolute; /* Position it over the original */
+            left: 50%; /* Center it */
+            transform: translateX(-50%); /* Adjust for centering */
+            opacity: 0; /* Start hidden */
+            transition: opacity 0.3s ease; /* Smooth transition */
+            box-shadow: 0 0 10px white; /* White glow effect */
+        }
+    </style>
 </head>
-<body width="100%" height="100%" bgcolor="#000000" style="margin: 0;" yahoo="yahoo">
-<table cellpadding="0" cellspacing="0" border="0" height="100%" width="100%" bgcolor="#000000" style="border-collapse:collapse;">
-  <tr>
-    <td bgcolor="#000000"><center style="width: 100%;">
-        
-        <div style="max-width: 600px;"> 
+<body>
+    <img src="index header.png" class="header-image" alt="Index Header"> <!-- Resized header image -->
+    
+    <a href="alexanderhaupt.html" class="link">alexander haupt</a>
+    <a href="https://alienpictures.org/Alexander-Haupt_Resume_2023.pdf" class="link">resume</a>
+    <a href="mailto:alex@alienpictures.org" class="link">contact</a>
 
-		<!-- Body : BEGIN -->
-          <table cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#000000" width="100%" style="max-width: 600px;">
-            
-            <!-- Hero Image, Flush-->
-            <tr>
-              <td class="full-width-image" align="center" ><img src="index header.png" width="680" alt="Index Header" border="0" style="width: 100%; max-width: 600px; height: auto;"></td>
-            </tr>
-
-			<tr>
-              <td bgcolor="#000000">&nbsp;</td>
-            </tr>
-
-            <tr>
-              <td bgcolor="#000000" align="center" height="100%" valign="top" width="100%">                <table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="max-width:560px;">
-                  <tr>
-                    <td align="center" valign="top" bgcolor="#000000" style="font-size: 0; padding: 10px 10px 30px 10px; color: #000000;">
-                      <p>&nbsp;</p>
-                      <div style="display: inline-block; max-width: 50%; margin: 0 -2px; vertical-align: top; width: 100%; color: #000000;" class="stack-column">
-                        <table cellspacing="0" cellpadding="0" border="0" width="100%">
-                          <tr>
-                            <td style="padding: 0 20px;"><table cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;text-align: left;">
-                                <tr>
-                                  <td style="text-align: center;"><a href="http://alienpictures.org/alexanderhaupt.html" target="_blank" class="link">Alexander Haupt</a></td>
-                                </tr>
-                                <tr>
-                                  <td style="font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #555555; padding-top: 10px;" class="stack-column-center">&nbsp;</td>
-                                </tr>
-                              </table></td>
-                          </tr>
-                        </table>
-                        <p>&nbsp;</p>
-                      </div>
-                      <p>&nbsp;</p>
-                      <div style="display:inline-block; max-width:50%; margin: 0 -2px; vertical-align:top; width:100%;" class="stack-column">
-                        <table cellspacing="0" cellpadding="0" border="0" width="100%">
-                          <tr>
-                            <td style="padding: 0 20px;"><table cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;text-align: left;">
-                                <tr>
-                                  <td style="text-align: center;"><a href="Alexander-Haupt_Resume_2023.pdf" class="link">Resume</a></td>
-                                </tr>
-                                <tr>
-                                  <td style="font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #555555; padding-top: 10px;" class="stack-column-center"> <p>&nbsp;</p></td>
-                                </tr>
-                              </table></td>
-                          </tr>
-                        </table>
-                        <p>&nbsp;</p>
-                      </div>
-                      <p>&nbsp;</p>
-                      <div style="display:inline-block; max-width:50%; margin: 0 -2px; vertical-align:top; width:100%;" class="stack-column">
-                        <table cellspacing="0" cellpadding="0" border="0" width="100%">
-                          <tr>
-                            <td style="padding: 0 20px;"><table cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;text-align: left;">
-                              <tr>
-                                <td style="text-align: center;"><a href="mailto:alex@alienpictures.org" class="link">Contact</a></td>
-                              </tr>
-                              <tr>
-                                <td style="font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #555555; padding-top: 10px;" class="stack-column-center">&nbsp;</td>
-                              </tr>
-                            </table></td>
-                          </tr>
-                        </table>
-                      </div>
-                      <p>&nbsp;</p></td>
-					</tr>
-				  </table>
-			  </td>
-			  </tr>
-			</table>
-          <!-- Body : END --> 
-          
-          <!-- Footer : BEGIN -->
-          <table cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 680px;">
-            <tr>
-              <td bgcolor="#000000" style="padding: 40px 10px;width: 100%;font-size: 12px; font-family: sans-serif; mso-height-rule: exactly; line-height:18px; text-align: center; color: #888888;">
-                <img src="nope future nope.png" alt="No Future" class="footer-image">
-                <br>
-                <br>
-                alienpictures.org<br>
-                <span class="mobile-link--footer">Philadelphia, PA</span> <br>
-                <br>
-                <unsubscribe style="color:#888888; text-decoration:underline;"></unsubscribe></td>
-            </tr>
-          </table>
-          <!-- Footer : END --> 
-        </div>
-      </center></td>
-  </tr>
-</table>
+    <!-- Footer -->
+    <footer>
+        <img src="nope future nope.png" alt="No Future" class="footer-image"> <!-- Original image -->
+        <img src="rolloverNOFUTURE.png" alt="Rollover No Future" class="hover-image"> <!-- Rollover image -->
+        <p>alienpictures.org</p>
+    </footer>
 </body>
 </html>
