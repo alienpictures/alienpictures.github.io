@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Link to Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400&display=swap" rel="stylesheet">
+    <!-- Updated Google Fonts link to include Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
 
     <style>
         body {
@@ -14,23 +14,25 @@
             padding: 0;
             background-color: #000000;
             color: #FAF7F7;
-            font-family: 'Raleway', sans-serif;
+            font-family: 'Inter', sans-serif; /* Updated base font */
             text-align: center;
         }
 
         .header-image {
-            width: 100%; /* Restored to original size */
+            width: 50%; /* Changed from 100% to 50% */
             height: auto;
         }
 
         .link {
-            font-family: 'Lobster Two', cursive;
+            font-family: 'Inter', sans-serif; /* Updated from Lobster Two to Inter */
+            font-weight: 500; /* Added medium weight for better visibility */
             font-size: 24px;
             color: #FAF7F7;
             text-decoration: none;
             display: block;
             margin: 20px 0;
             text-transform: lowercase;
+            letter-spacing: 0.5px; /* Added slight letter spacing for modern look */
         }
 
         .footer-image {
@@ -59,6 +61,12 @@
 
         .footer-image:hover + .hover-image {
             opacity: 1;
+        }
+
+        footer p {
+            font-family: 'Inter', sans-serif; /* Updated font for footer text */
+            font-weight: 400;
+            letter-spacing: 0.5px;
         }
     </style>
 </head>
