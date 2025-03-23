@@ -1,81 +1,191 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Alien Pictures</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Link to Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400&display=swap" rel="stylesheet">
-
+    <title>The Johnston Family</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
-            padding: 0;
-            background-color: #000000;
-            color: #FAF7F7;
-            font-family: 'Raleway', sans-serif; /* Use the new font */
-            text-align: center; /* Center all text */
+            padding: 20px;
+            background-color: #FDF5E6; /* Cream color */
+            font-family: 'Montserrat', sans-serif; /* Updated font */
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif; /* Updated font */
+            font-weight: 700; /* Bold weight for headers */
+            font-size: 4em;
+            color: #1E90FF; /* Blue color */
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
         }
 
         .header-image {
-            width: 50%; /* Set to 50% of its original size */
-            height: auto; /* Maintain aspect ratio */
+            width: 50%; /* Set header image to 50% of original size */
+            height: auto;
         }
 
-        .link {
-            font-family: 'Lobster Two', cursive; /* Use Lobster Two for links */
-            font-size: 24px; /* Adjust font size as needed */
-            color: #FAF7F7; /* Match color */
-            text-decoration: none; /* Remove underline */
-            display: block; /* Make links block elements for spacing */
-            margin: 20px 0; /* Set consistent margin for spacing */
-            text-transform: lowercase; /* Ensure all text is lowercase */
+        #gameContainer {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            max-width: 600px;
         }
 
-        .footer-image {
-            width: 17%; /* Set to 17% of its original size */
-            height: auto; /* Maintain aspect ratio */
-            margin-top: 20px; /* Space above the image */
-            position: relative; /* Position for hover effect */
-            transition: opacity 0.3s ease; /* Smooth transition */
+        #gameCanvas {
+            border: 2px solid #333;
+            border-radius: 5px;
         }
 
-        .footer-image:hover {
-            opacity: 0; /* Hide the original image on hover */
+        .controls {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            display: inline-block;
         }
 
-        .hover-image {
-            width: 25%; /* Set to 25% of its original size */
-            height: auto; /* Maintain aspect ratio */
-            margin-top: 20px; /* Space above the image */
-            position: absolute; /* Position it over the original */
-            left: 50%; /* Center it */
-            transform: translateX(-50%); /* Adjust for centering */
-            opacity: 0; /* Start hidden */
-            transition: opacity 0.3s ease; /* Smooth transition */
-            box-shadow: 0 0 10px white; /* White glow effect */
-        }
-
-        .footer-image:hover + .hover-image {
-            opacity: 1; /* Show the rollover image on hover */
+        .controls p {
+            margin: 5px 0;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
-    <img src="index header.png" class="header-image" alt="Index Header"> <!-- Resized header image -->
+    <img src="indexheader.png" class="header-image" alt="Header Image">
     
-    <a href="alexanderhaupt.html" class="link">alexander haupt</a>
-    <a href="https://alienpictures.org/Alexander-Haupt_Resume_2023.pdf" class="link">resume</a>
-    <a href="mailto:alex@alienpictures.org" class="link">contact</a>
+    <div id="gameContainer">
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+        <div class="controls">
+            <p>Use Arrow Keys or WASD to move Pac-Man</p>
+            <p>Collect all dots to win!</p>
+        </div>
+    </div>
 
-    <!-- Footer with linked images -->
-    <footer>
-        <a href="https://www.fallingfalling.com/">
-            <img src="nope future nope.png" alt="No Future" class="footer-image"> <!-- Original image -->
-            <img src="rolloverNOFUTURE.png" alt="Rollover No Future" class="hover-image"> <!-- Rollover image -->
-        </a>
-        <p>alienpictures.org</p>
-    </footer>
+    <script>
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        const CELL_SIZE = 20;
+        const GRID_WIDTH = 20;
+        const GRID_HEIGHT = 20;
+        
+        let pacman = {
+            x: CELL_SIZE * 10,
+            y: CELL_SIZE * 10,
+            direction: 0,
+            speed: 3
+        };
+
+        let dots = [];
+        
+        // Initialize dots
+        function initDots() {
+            for(let i = 1; i < GRID_WIDTH - 1; i++) {
+                for(let j = 1; j < GRID_HEIGHT - 1; j++) {
+                    if(Math.random() < 0.3) { // 30% chance of dot placement
+                        dots.push({x: i * CELL_SIZE, y: j * CELL_SIZE});
+                    }
+                }
+            }
+        }
+
+        // Draw Pac-Man
+        function drawPacman() {
+            ctx.beginPath();
+            ctx.arc(pacman.x, pacman.y, CELL_SIZE/2, 0.2 * Math.PI + pacman.direction, 1.8 * Math.PI + pacman.direction);
+            ctx.lineTo(pacman.x, pacman.y);
+            ctx.fillStyle = "yellow";
+            ctx.fill();
+            ctx.closePath();
+        }
+
+        // Draw dots
+        function drawDots() {
+            ctx.fillStyle = "white";
+            dots.forEach(dot => {
+                ctx.beginPath();
+                ctx.arc(dot.x, dot.y, 3, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.closePath();
+            });
+        }
+
+        // Check collision with dots
+        function checkDotCollision() {
+            dots = dots.filter(dot => {
+                const distance = Math.sqrt(
+                    Math.pow(dot.x - pacman.x, 2) + 
+                    Math.pow(dot.y - pacman.y, 2)
+                );
+                return distance > CELL_SIZE/2;
+            });
+        }
+
+        // Game loop
+        function gameLoop() {
+            // Clear canvas
+            ctx.fillStyle = "black";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            
+            // Draw maze walls (simple border)
+            ctx.strokeStyle = "blue";
+            ctx.strokeRect(0, 0, canvas.width, canvas.height);
+
+            // Draw dots
+            drawDots();
+            
+            // Draw Pac-Man
+            drawPacman();
+            
+            // Check collisions
+            checkDotCollision();
+
+            // Check win condition
+            if(dots.length === 0) {
+                ctx.fillStyle = "white";
+                ctx.font = "30px Arial";
+                ctx.fillText("You Win!", canvas.width/2 - 50, canvas.height/2);
+                return;
+            }
+
+            requestAnimationFrame(gameLoop);
+        }
+
+        // Handle keyboard input
+        document.addEventListener('keydown', (e) => {
+            switch(e.key) {
+                case 'ArrowLeft':
+                case 'a':
+                    pacman.x = Math.max(CELL_SIZE/2, pacman.x - pacman.speed);
+                    pacman.direction = Math.PI;
+                    break;
+                case 'ArrowRight':
+                case 'd':
+                    pacman.x = Math.min(canvas.width - CELL_SIZE/2, pacman.x + pacman.speed);
+                    pacman.direction = 0;
+                    break;
+                case 'ArrowUp':
+                case 'w':
+                    pacman.y = Math.max(CELL_SIZE/2, pacman.y - pacman.speed);
+                    pacman.direction = -Math.PI/2;
+                    break;
+                case 'ArrowDown':
+                case 's':
+                    pacman.y = Math.min(canvas.height - CELL_SIZE/2, pacman.y + pacman.speed);
+                    pacman.direction = Math.PI/2;
+                    break;
+            }
+        });
+
+        // Start the game
+        initDots();
+        gameLoop();
+    </script>
 </body>
 </html>
